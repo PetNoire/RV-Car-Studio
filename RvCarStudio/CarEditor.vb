@@ -408,7 +408,7 @@ Public Class CarEditor
     Public Saved = False
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
         'TODO: saved?
-        YESNO.Question.Text = "This will exit " & APPNAME & "." & vbNewLine & " Proceed?"
+        YESNO.Question.Text = "This will exit " & APPNAME & "." & vbLf & " Proceed?"
         If YESNO.ShowDialog = Windows.Forms.DialogResult.Yes Then
             End
         End If

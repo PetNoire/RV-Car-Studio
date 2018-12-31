@@ -143,6 +143,9 @@ Public Class PICK_BMP
         If IO.File.Exists(RVPATH & "\levels\frontend\frontendg.bmp") = False Then
             Beep()
             Console_.W("Error! " & RVPATH & "\levels\frontend\frontendg.bmp" & " doesn't exist!")
+            Return SystemIcons.Error.ToBitmap
+        Else
+            Return Image.FromFile(RVPATH & "\levels\frontend\frontendg.bmp")
         End If
 
     End Function

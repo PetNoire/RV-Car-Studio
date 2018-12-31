@@ -29,33 +29,34 @@
 
     'TODO: clean this Clean code
     Sub Clean()
-        Dim temp = Split(newStr, vbNewLine)
+        newStr = newStr.Replace(vbCr, "")
+        Dim temp = Split(newStr, vbLf)
         Dim CleanStr As String = ""
         For i = 0 To UBound(temp)
             If InStr(temp(i), ";") > 0 Then
                 If temp(i).Length > 1 Then
                     If temp(i)(1) = ")" Then
-                        CleanStr &= temp(i) & vbNewLine
+                        CleanStr &= temp(i) & vbLf
                         Continue For
                     End If
                 End If
 
 
-                CleanStr &= Split(temp(i), ";")(0) & vbNewLine
+                CleanStr &= Split(temp(i), ";")(0) & vbLf
             Else
 
-                CleanStr &= temp(i) & vbNewLine
+                CleanStr &= temp(i) & vbLf
             End If
         Next
 
-        Do Until InStr(CleanStr, vbNewLine & vbNewLine) < 1
-            CleanStr = Replace(CleanStr, vbNewLine & vbNewLine, vbNewLine)
+        Do Until InStr(CleanStr, vbLf & vbLf) < 1
+            CleanStr = Replace(CleanStr, vbLf & vbLf, vbLf)
         Loop
 
         newStr = CleanStr
     End Sub
     Public Function getAllSingletons() As String()
-        Dim temp() = newStr.Split(vbNewLine)
+        Dim temp() = newStr.Split(vbLf)
         Dim header As String = ""
         For i = LBound(temp) To UBound(temp)
             If InStr(temp(i), "{") > 0 Then
@@ -594,7 +595,7 @@
         If InStr(Split(temp, "}")(0), "{") < 1 Then
             'lucky us!
             Dim l = Split(temp, "}")(0)
-            Dim torep = Split(l, vbNewLine).Last
+            Dim torep = Split(l, vbLf).Last
 
             Return SingletonItem.ToSingletonItem(Replace(l, torep, ""))
 
@@ -603,7 +604,7 @@
             'how unlucky...
             Dim tmp As String = temp
             Do Until InStr(tmp, "{") = 0
-                Dim splt = Split(Split(Split(tmp, "{")(0), vbNewLine)(1), "}")(0)
+                Dim splt = Split(Split(Split(tmp, "{")(0), vbLf)(1), "}")(0)
                 tmp = Replace(tmp, splt, "")
             Loop
             Return SingletonItem.ToSingletonItem(tmp)
@@ -618,7 +619,7 @@ Public Class SingletonItem
 
     Public Shared Function ToSingletonItem(ByVal str As String) As SingletonItem
         Dim nSing As New SingletonItem
-        Dim splitted() = Split(str, vbNewLine)
+        Dim splitted() = Split(str, vbLf)
         ReDim items(splitted.Length)
         SingletonItem.items = splitted
         SingletonItem.items = splitted
@@ -651,7 +652,7 @@ Public Class SingletonItem
                     If expected = "float" And IsNumeric(tmp) = False Then tmp = defaultValue
                     If expected = "bool" Then tmp = Replace(Replace(tmp, " ", ""), "    ", "")
 
-                    
+
                     If InStr(tmp, ";") > 0 Then tmp = Split(tmp, ";")(0)
                     tmp = LTrim(RTrim(tmp))
                     If tmp Is Nothing Then Return defaultValue
@@ -709,9 +710,9 @@ Public Class SingletonItem
         For i = LBound(items) To UBound(items)
 
             If InStr(items(i), key) > 0 Then
-                Dim tmp = Replace(Split(items(i), key)(1), " " & vbTab, "") & vbNewLine  ', ".", ",")
+                Dim tmp = Replace(Split(items(i), key)(1), " " & vbTab, "") & vbLf  ', ".", ",")
 
-                tmp &= Replace(items(i + 1), " " & vbTab, "") & vbNewLine  ', ".", ",")
+                tmp &= Replace(items(i + 1), " " & vbTab, "") & vbLf  ', ".", ",")
                 tmp &= Replace(items(i + 2), " " & vbTab, "") ', ".", ",")
 
                 If InStr(CSng(2.15), ",") <> 0 Then
@@ -729,7 +730,7 @@ Public Class SingletonItem
         For i = LBound(items) To UBound(items)
 
             If InStr(items(i), key) > 0 Then
-                Dim tmp = Replace(Split(items(i), key)(1), " " & vbTab, "") & vbNewLine  ', ".", ",") & 
+                Dim tmp = Replace(Split(items(i), key)(1), " " & vbTab, "") & vbLf  ', ".", ",") & 
 
                 tmp &= Replace(items(i + 1), " " & vbTab, "") ', ".", ",")
 

@@ -228,15 +228,15 @@ Module oVolt_helpers
     '-readme
     Sub GenerateReadMe()
         Dim X As New IO.StreamWriter(Application.StartupPath & "\readme.txt")
-        X.WriteLine("________________________________________" & vbNewLine)
-        X.WriteLine("   R e - V o l t  C a r  S t u d i o" & vbNewLine)
+        X.WriteLine("________________________________________" & vbLf)
+        X.WriteLine("   R e - V o l t  C a r  S t u d i o" & vbLf)
         X.WriteLine("________________________________________")
         X.WriteLine()
-        X.WriteLine("Name: " & APPNAME & vbNewLine & _
-                      "Made by: " & Maker & vbNewLine & _
-                      "Version: " & MajorVersion & "." & MinorVersion & "." & BuildNumber & "." & Revision & "[" & Type.ToString & "]" & vbNewLine & _
-               "________________________________________" & vbNewLine & _
-                      "COPYRIGHTS:" & vbNewLine & COPY)
+        X.WriteLine("Name: " & APPNAME & vbLf & _
+                      "Made by: " & Maker & vbLf & _
+                      "Version: " & MajorVersion & "." & MinorVersion & "." & BuildNumber & "." & Revision & "[" & Type.ToString & "]" & vbLf & _
+               "________________________________________" & vbLf & _
+                      "COPYRIGHTS:" & vbLf & COPY)
 
         X.WriteLine("________________________________________")
         X.WriteLine(FULL_INFO)

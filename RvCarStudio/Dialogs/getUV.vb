@@ -395,7 +395,7 @@ Public Class UVviewer
 
 
     Sub DoWrite(ByVal Str As String)
-        TextBox3.AppendText(">> " & Str & vbNewLine)
+        TextBox3.AppendText(">> " & Str & vbLf)
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick

@@ -4,6 +4,6 @@
 
     End Sub
     Sub W(ByVal str$)
-        TextBox1.AppendText(">> " & str & vbNewLine)
+        TextBox1.AppendText(">> " & str & vbLf)
     End Sub
 End Class

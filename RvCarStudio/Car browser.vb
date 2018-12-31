@@ -42,7 +42,7 @@ Public Class CarBrowser
             Else
                 Label5.Text &= "-, "
             End If
-            If i = 1 Then Label5.Text &= vbNewLine
+            If i = 1 Then Label5.Text &= vbLf
         Next i
 
         Label5.Text = Label5.Text.Substring(0, Len(Label5.Text) - 2)
@@ -56,7 +56,7 @@ Public Class CarBrowser
         Label13.Text = Replace(DirectCast(cars(0).Theory.MainInfos.obtain, Obtaino).ToString, "_", " ")
         Label15.Text = Replace(DirectCast(cars(0).Theory.MainInfos.Rating, ratingo).ToString, "_", "-")
 
-        Label17.Text = cars(0).Theory.RealInfos.TopSpeed & " mph" & vbNewLine & Int(cars(0).Theory.RealInfos.TopSpeed * 1.6) & "km/h"
+        Label17.Text = cars(0).Theory.RealInfos.TopSpeed & " mph" & vbLf & Int(cars(0).Theory.RealInfos.TopSpeed * 1.6) & "km/h"
 
         If Single.IsNaN(PolyCount) Then Panel9.Width = 0 Else _
       Panel9.Width = Min(PolyCount * 240 / 10000, 240)
@@ -117,8 +117,9 @@ Public Class CarBrowser
 
         'for each car...
         For i = LBound(cars) To UBound(cars)
-            If IO.File.Exists(cars(i) & "\parameters.txt") Then 'get parameters 
-                Dim sing As New Singletons(cars(i) & "\parameters.txt") 'load it into singletons
+            Dim File = cars(i) & "\parameters.txt"
+            If IO.File.Exists(File) Then 'get parameters 
+                Dim sing As New Singletons(File) 'load it into singletons
                 Dim name = Replace(Replace(sing.getSingleton("").getValue("Name"), vbTab, ""), ",", ".") 'name
                 Do Until name(0) = Chr(34) 'get name
                     name = Mid(name, 2)
@@ -238,15 +239,15 @@ Public Class CarBrowser
                 auth = "Citywalker"
 
             ElseIf InStr(rm, "author name", CompareMethod.Text) > 0 Then
-                auth = Split(rm, "author name", -1, CompareMethod.Text)(1).Split(vbNewLine)(0)
+                auth = Split(rm, "author name", -1, CompareMethod.Text)(1).Split(vbLf)(0)
             ElseIf InStr(rm, "author", CompareMethod.Text) > 0 Then
-                auth = Split(rm, "author", -1, CompareMethod.Text)(1).Split(vbNewLine)(0)
+                auth = Split(rm, "author", -1, CompareMethod.Text)(1).Split(vbLf)(0)
             ElseIf InStr(rm, "created by", CompareMethod.Text) > 0 Then
-                auth = Split(rm, "created by", -1, CompareMethod.Text)(1).Split(vbNewLine)(0)
+                auth = Split(rm, "created by", -1, CompareMethod.Text)(1).Split(vbLf)(0)
             ElseIf InStr(rm, "creator", CompareMethod.Text) > 0 Then
-                auth = Split(rm, "creator", -1, CompareMethod.Text)(1).Split(vbNewLine)(0)
+                auth = Split(rm, "creator", -1, CompareMethod.Text)(1).Split(vbLf)(0)
             ElseIf InStr(rm, "by", CompareMethod.Text) > 0 Then
-                auth = Split(rm, "by", -1, CompareMethod.Text)(1).Split(vbNewLine)(0)
+                auth = Split(rm, "by", -1, CompareMethod.Text)(1).Split(vbLf)(0)
             Else
                 If auth = "" Then auth = "Unknown"
             End If
@@ -254,7 +255,7 @@ Public Class CarBrowser
 
             'BURNER's Sign
 
-            If InStr(Split(rm, vbNewLine)(UBound(Split(rm, vbNewLine))), "Burner", CompareMethod.Text) = 1 Then
+            If InStr(Split(rm, vbLf)(UBound(Split(rm, vbLf))), "Burner", CompareMethod.Text) = 1 Then
                 auth = "Burner94"
             End If
 
@@ -399,7 +400,7 @@ xFail:
 
                     End If
                 Else
-                    'Tip.fShow("~~Error: MODEL(" & cars(Active_Car).Theory.wheel(i).modelNumber & ") doesn't exist" & vbNewLine)
+                    'Tip.fShow("~~Error: MODEL(" & cars(Active_Car).Theory.wheel(i).modelNumber & ") doesn't exist" & vbLf)
                 End If
 
             End If
@@ -424,8 +425,8 @@ xFail:
 
                 cars(Active_Car).models.Spring(i).MATRIX = Matrix4.Scale(1, Scale, 1)
 
-                cars(Active_Car).models.Spring(i).MATRIX *= BuildLookMatrixDown( _
-                            cars(Active_Car).Theory.wheel(i).Offset(1) * Zoom, _
+                cars(Active_Car).models.Spring(i).MATRIX *= BuildLookMatrixDown(
+                            cars(Active_Car).Theory.wheel(i).Offset(1) * Zoom,
                             cars(Active_Car).Theory.Spring(i).Offset * Zoom)
 
 
@@ -452,8 +453,8 @@ xFail:
 
                 cars(Active_Car).models.axle(i).MATRIX = Matrix4.Scale(1, 1, Scale)
 
-                cars(Active_Car).models.axle(i).MATRIX *= BuildLookMatrixForward( _
-                                                    cars(Active_Car).Theory.Axle(i).offSet * Zoom, _
+                cars(Active_Car).models.axle(i).MATRIX *= BuildLookMatrixForward(
+                                                    cars(Active_Car).Theory.Axle(i).offSet * Zoom,
                                                       cars(Active_Car).Theory.wheel(i).Offset(1) * Zoom)
 
 
@@ -478,8 +479,8 @@ xFail:
 
                 cars(Active_Car).models.Pin(i).MATRIX = Matrix4.Scale(1, -cars(Active_Car).Theory.PIN(i).Length, 1)
 
-                cars(Active_Car).models.Pin(i).MATRIX *= BuildLookMatrixDown( _
-                         cars(Active_Car).Theory.wheel(i).Offset(1) * Zoom, _
+                cars(Active_Car).models.Pin(i).MATRIX *= BuildLookMatrixDown(
+                         cars(Active_Car).Theory.wheel(i).Offset(1) * Zoom,
                          cars(Active_Car).Theory.PIN(i).offSet * Zoom + cars(Active_Car).Theory.Spring(i).Offset * Zoom)
 
                 cars(Active_Car).models.Pin(i).MATRIX *= Matrix4.CreateTranslation(cars(Active_Car).Theory.PIN(i).offSet * Zoom + cars(Active_Car).Theory.Spring(i).Offset * Zoom / 2)
@@ -510,7 +511,7 @@ xFail:
         'load aerial
         If cars(Active_Car).Theory.Aerial.ModelNumber <> -1 Then
             If IO.File.Exists(RVPATH & "\" & cars(Active_Car).Theory.MainInfos.Model(cars(Active_Car).Theory.Aerial.ModelNumber).Replace(Chr(34), "")) = False Then
-                ' Tip.fShow("~~Error: MODEL(" & cars(Active_Car).Theory.Aerial.ModelNumber & ") doesn't exist" & vbNewLine)
+                ' Tip.fShow("~~Error: MODEL(" & cars(Active_Car).Theory.Aerial.ModelNumber & ") doesn't exist" & vbLf)
             End If
             cars(Active_Car).models.Aerial = New PRM(RVPATH & "\" & cars(Active_Car).Theory.MainInfos.Model(cars(Active_Car).Theory.Aerial.ModelNumber).Replace(Chr(34), ""))
             If cars(Active_Car).models.Aerial IsNot Nothing Then

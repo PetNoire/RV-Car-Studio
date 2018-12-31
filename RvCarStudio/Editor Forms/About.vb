@@ -1,11 +1,11 @@
 ﻿Public Class _About
 
     Public Sub DoLoad()
-        TextBox1.Text = "Name: " & APPNAME & vbNewLine & _
-                      "Made by: " & Maker & vbNewLine & _
-                      "Version: " & MajorVersion & "." & MinorVersion & "." & BuildNumber & "." & Revision & "[" & Type.ToString & "]" & vbNewLine & _
-                      "COPYRIGHTS:" & vbNewLine & COPY & vbNewLine & _
-                        vbNewLine & _
+        TextBox1.Text = "Name: " & APPNAME & vbLf & _
+                      "Made by: " & Maker & vbLf & _
+                      "Version: " & MajorVersion & "." & MinorVersion & "." & BuildNumber & "." & Revision & "[" & Type.ToString & "]" & vbLf & _
+                      "COPYRIGHTS:" & vbLf & COPY & vbLf & _
+                        vbLf & _
                             FULL_INFO
 
 

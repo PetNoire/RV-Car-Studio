@@ -4,14 +4,15 @@ Imports System.Drawing
 Imports Img = System.Drawing.Imaging
 Imports OpenTK.Graphics.OpenGL
 
-''' The methods in this namespace assume you are familiar with the follow
-''' texture concepts of OpenGL:
-''' * their integer names
-''' * their sizes (power of 2)
-''' * the currently bound texture
-''' * how pixels are colored based on the texture fragment + the current color
-''' * how alpha blending works
-''' If you are feeling unsure on any of these concepts, do some googling!
+' The methods in this namespace assume you are familiar with the follow
+' texture concepts of OpenGL:
+' * their integer names
+' * their sizes (power of 2)
+' * the currently bound texture
+' * how pixels are colored based on the texture fragment + the current color
+' * how alpha blending works
+' If you are feeling unsure on any of these concepts, do some googling!
+
 Namespace TexLib
     ''' <summary>
     ''' The TexUtil class is released under the MIT-license.

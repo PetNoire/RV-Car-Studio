@@ -536,11 +536,11 @@ skipme:
             .Mass = body.getValue("Mass")
 
             Dim _inertia$ = body.get3LinesValue("Inertia")
-            .Inertia(0) = StrToVector(Split(_inertia, vbNewLine)(0))
+            .Inertia(0) = StrToVector(Split(_inertia, vbLf)(0))
             .Inertia(0).Y *= -1
-            .Inertia(1) = StrToVector(Split(_inertia, vbNewLine)(1))
+            .Inertia(1) = StrToVector(Split(_inertia, vbLf)(1))
             .Inertia(1).Y *= -1
-            .Inertia(2) = StrToVector(Split(_inertia, vbNewLine)(2))
+            .Inertia(2) = StrToVector(Split(_inertia, vbLf)(2))
             .Inertia(2).Y *= -1
 
 

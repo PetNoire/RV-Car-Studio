@@ -5,7 +5,7 @@
     Public Sub FindAllLanguages()
         'cleanup
         Languages.Clear()
-        Config.ComboBox1.Items.Clear()
+        Config.ComboBoxLang.Items.Clear()
 
         'Prioritize English....
         'Dim AllLangs = IO.Directory.GetFiles(Application.StartupPath & "\data\lang\", "english.txt").Union(IO.Directory.GetFiles("data\lang\", "*.txt"))
@@ -44,7 +44,7 @@
 
             'add to languages
             Languages.Add(Me)
-            Config.ComboBox1.Items.Add(Name)
+            Config.ComboBoxLang.Items.Add(Name)
 
             'start loading
             Me.LoadAll()
@@ -111,7 +111,7 @@
                     Case "MESSAGE", "Message"
                         Config.Label1.Text = arg
                     Case "NEXT"
-                        Config.Button1.Text = arg
+                        Config.ButtonNext.Text = arg
                     Case "PREVIOUS"
                         Config.Button2.Text = arg
                     Case "TRANSLATOR"
@@ -145,7 +145,7 @@
                     Case "DRIVE"
                         Config.Label2.Text = arg
                     Case "NEXT"
-                        Config.Button1.Text = arg
+                        Config.ButtonNext.Text = arg
                     Case "PREVIOUS"
                         Config.Button2.Text = arg
                 End Select
@@ -172,7 +172,7 @@
                     Case "MESSAGE", "Message"
                         Config.Label1.Text = arg
                     Case "NEXT"
-                        Config.Button1.Text = arg
+                        Config.ButtonNext.Text = arg
                     Case "PREVIOUS"
                         Config.Button2.Text = arg
                 End Select

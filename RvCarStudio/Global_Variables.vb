@@ -21,23 +21,23 @@ Public Const Type As VerType = VerType.preAlpha
     Public Const ACTIVE_YEARS = "2010-2014"
     Public Const COPY = "Copyright © " & APPNAME & " (" & ACTIVE_YEARS & "). Based on Car Load, Shader, PRM, Re-Volt source code..."
 
-    Public Const FULL_INFO = APPNAME & " (" & MajorVersion & "." & MinorVersion & ") by " & Maker & "." & vbNewLine & _
-                            "All rights reserved © " & ACTIVE_YEARS & vbNewLine & _
-                            "Licensed under GNU GPL." & vbNewLine & _
-                            vbNewLine & _
-                            "This program uses VoltGL rendering engine based on OpenTK" & vbNewLine & _
-                            "VoltGL's full source code is included in " & APPNAME & ". All rights reserved to its maker Kallel A.Y" & vbNewLine & _
-                            "VoltGL uses OpenTK: Copyright (c) 2006 - 2012 the Open Toolkit library." & vbNewLine & _
-                            vbNewLine & _
-                            "This programs uses Car::Load's source code all ported to VoltGL/RvCarStudio. Copyright C::L 2009-2012" & vbNewLine & _
-                            vbNewLine & _
-                            "The Tips provided by Burner94, Citywalker, Halogaland and MythicMonkey all belong to their owners." & vbNewLine & _
-                            "AI Help is mainly provided by CityWalker." & vbNewLine & _
-                            "RvCarStudio uses RVL people's suggestions. Refer to Car Load's topic for more info." & vbNewLine & _
-                            vbNewLine & _
-                            "Re-Volt is a trademark of Acclaim and IP by We Go Interactive. All rights reserved WeGOi 2013" & vbNewLine & _
-                            "We Go Interactive IS NOT " & Maker & "." & Maker & " IS NOT We GO Interactive. " & vbNewLine & _
-                            "This Program is made by Re-Volt fans." & vbNewLine & _
+    Public Const FULL_INFO = APPNAME & " (" & MajorVersion & "." & MinorVersion & ") by " & Maker & "." & vbLf & _
+                            "All rights reserved © " & ACTIVE_YEARS & vbLf & _
+                            "Licensed under GNU GPL." & vbLf & _
+                            vbLf & _
+                            "This program uses VoltGL rendering engine based on OpenTK" & vbLf & _
+                            "VoltGL's full source code is included in " & APPNAME & ". All rights reserved to its maker Kallel A.Y" & vbLf & _
+                            "VoltGL uses OpenTK: Copyright (c) 2006 - 2012 the Open Toolkit library." & vbLf & _
+                            vbLf & _
+                            "This programs uses Car::Load's source code all ported to VoltGL/RvCarStudio. Copyright C::L 2009-2012" & vbLf & _
+                            vbLf & _
+                            "The Tips provided by Burner94, Citywalker, Halogaland and MythicMonkey all belong to their owners." & vbLf & _
+                            "AI Help is mainly provided by CityWalker." & vbLf & _
+                            "RvCarStudio uses RVL people's suggestions. Refer to Car Load's topic for more info." & vbLf & _
+                            vbLf & _
+                            "Re-Volt is a trademark of Acclaim and IP by We Go Interactive. All rights reserved WeGOi 2013" & vbLf & _
+                            "We Go Interactive IS NOT " & Maker & "." & Maker & " IS NOT We GO Interactive. " & vbLf & _
+                            "This Program is made by Re-Volt fans." & vbLf & _
                             ""
 
 

@@ -15,10 +15,10 @@ Module Axis_Grid_Etc
 
     'inits all the car components
     Sub AllInit()
-        initAxis()
+        InitAxis()
         InitCOM()
         InitWG()
-        initSplitter()
+        InitSplitter()
     End Sub
 
     'Init "splitters" model used
@@ -43,7 +43,7 @@ Module Axis_Grid_Etc
     End Sub
 
     'Axis
-    Sub initAxis()
+    Sub InitAxis()
         AXIS = New PRM(Application.StartupPath & "\data\models\axis.prm", True, True)
 
         AXIS.isVisible = False

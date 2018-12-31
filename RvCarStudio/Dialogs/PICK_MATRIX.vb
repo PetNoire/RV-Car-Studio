@@ -52,11 +52,11 @@ Public Class PICK_MATRIX
         If Param Is Nothing Then Beep() : Exit Sub
         Dim I$ = Param.getSingleton("BODY").get3LinesValue("Inertia")
 
-        Inertia(0) = cars(Active_Car).StrToVector(Split(I, vbNewLine)(0))
+        Inertia(0) = cars(Active_Car).StrToVector(Split(I, vbLf)(0))
         Inertia(0).Y *= -1
-        Inertia(1) = cars(Active_Car).StrToVector(Split(I, vbNewLine)(1))
+        Inertia(1) = cars(Active_Car).StrToVector(Split(I, vbLf)(1))
         Inertia(1).Y *= -1
-        Inertia(2) = cars(Active_Car).StrToVector(Split(I, vbNewLine)(2))
+        Inertia(2) = cars(Active_Car).StrToVector(Split(I, vbLf)(2))
         Inertia(2).Y *= -1
 
         PrintVecToObjectsT(Inertia(0), TextBox10, TextBox2, TextBox3)

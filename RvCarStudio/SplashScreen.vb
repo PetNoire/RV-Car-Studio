@@ -38,10 +38,10 @@
         Me.Vers.Text = "version " & System.String.Format("{0}.{1}", My.Application.Info.Version.Major, My.Application.Info.Version.Minor) ', BuildNumber, Revision)
 
         'Copyright info
-        info.Text = "Now Loading ... " & My.Application.Info.Title & vbNewLine & vbNewLine & _
-                    "Version: " & My.Application.Info.Version.ToString & vbNewLine & vbNewLine & _
-                    "Description: " & My.Application.Info.Description & vbNewLine & vbNewLine & _
-                    "Memory: " & My.Application.Info.WorkingSet / (2 ^ 20) & "MB" & vbNewLine & vbNewLine & _
+        info.Text = "Now Loading ... " & My.Application.Info.Title & vbLf & vbLf & _
+                    "Version: " & My.Application.Info.Version.ToString & vbLf & vbLf & _
+                    "Description: " & My.Application.Info.Description & vbLf & vbLf & _
+                    "Memory: " & My.Application.Info.WorkingSet / (2 ^ 20) & "MB" & vbLf & vbLf & _
                     "Copyright: " & My.Application.Info.Copyright
 
         Dim wait_forcarname = 0
@@ -135,7 +135,7 @@ Loadsettings:
 
 
         'Langauges
-        If Languages.Count = 0 Then AddLanguage(Sett_get("lang", "")) Else Languages(0) = Languages(Config.ComboBox1.SelectedIndex)
+        If Languages.Count = 0 Then AddLanguage(Sett_get("lang", "")) Else Languages(0) = Languages(Config.ComboBoxLang.SelectedIndex)
         Languages(0).LoadAll()
         Tip.LoadTips(Languages(0))
 

@@ -375,7 +375,8 @@ Public Class PRM
 
 
         'J=fopen(filepath,'rb')
-        Dim J As New BinaryReader(New FileStream(Replace(filepath, Chr(34), ""), FileMode.Open, FileAccess.Read))
+        Dim File = Replace(filepath, Chr(34), "")
+        Dim J As New BinaryReader(New FileStream(File, FileMode.Open, FileAccess.Read))
 
         'Vert/Poly count
         MyModel.polynum = J.ReadInt16()

@@ -65,7 +65,7 @@
 
         For i = 0 To D.Count - 1
             l = Len(D.Keys(i)) + Len(D(D.Keys(i))) + 3
-            INPUT.Write(Binarize(D.Keys(i) & ": " & D(D.Keys(i)) & vbNewLine), Pos, l)
+            INPUT.Write(Binarize(D.Keys(i) & ": " & D(D.Keys(i)) & vbLf), Pos, l)
             l += Pos
         Next
         INPUT.Flush()

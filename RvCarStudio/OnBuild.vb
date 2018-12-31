@@ -24,7 +24,7 @@ skipme:
         Dim h$ = Split(gv, "  Public Const Revision =")(0)
         Dim v$ = Split(Split(gv, "  Public Const Revision =")(1), Chr(34))(1)
         Dim f$ = Mid(gv, InStr(gv, "Public Const Type"))
-        IO.File.WriteAllText("..\..\Global_Variables.vb", h & "  Public Const Revision =" & Chr(34) & Int(v) + 1 & Chr(34) & vbNewLine & f)
+        IO.File.WriteAllText("..\..\Global_Variables.vb", h & "  Public Const Revision =" & Chr(34) & Int(v) + 1 & Chr(34) & vbLf & f)
 
 
     End Sub

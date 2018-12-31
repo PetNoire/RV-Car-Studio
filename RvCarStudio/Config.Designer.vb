@@ -23,26 +23,26 @@ Partial Class Config
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Config))
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.Title = New System.Windows.Forms.Label
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.trans = New System.Windows.Forms.Label
-        Me.Panel2 = New System.Windows.Forms.Panel
-        Me.TextBox7 = New System.Windows.Forms.TextBox
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox
-        Me.Up = New System.Windows.Forms.Button
-        Me.ListView1 = New System.Windows.Forms.ListView
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Title = New System.Windows.Forms.Label()
+        Me.ComboBoxLang = New System.Windows.Forms.ComboBox()
+        Me.trans = New System.Windows.Forms.Label()
+        Me.FileSelectPanel = New System.Windows.Forms.Panel()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Up = New System.Windows.Forms.Button()
+        Me.FileSelectView = New System.Windows.Forms.ListView()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ButtonNext = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.FileSelectPanel.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -64,7 +64,7 @@ Partial Class Config
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1092, 28)
+        Me.Panel1.Size = New System.Drawing.Size(1129, 28)
         Me.Panel1.TabIndex = 1
         '
         'Title
@@ -73,42 +73,42 @@ Partial Class Config
         Me.Title.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Title.Location = New System.Drawing.Point(0, 0)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(1092, 28)
+        Me.Title.Size = New System.Drawing.Size(1129, 28)
         Me.Title.TabIndex = 0
         Me.Title.Text = "Title"
         Me.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ComboBox1
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(86, 192)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox1.TabIndex = 2
+        Me.ComboBoxLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxLang.FormattingEnabled = True
+        Me.ComboBoxLang.Location = New System.Drawing.Point(86, 192)
+        Me.ComboBoxLang.Name = "ComboBox1"
+        Me.ComboBoxLang.Size = New System.Drawing.Size(244, 21)
+        Me.ComboBoxLang.TabIndex = 2
         '
         'trans
         '
         Me.trans.AutoSize = True
         Me.trans.Location = New System.Drawing.Point(367, 196)
         Me.trans.Name = "trans"
-        Me.trans.Size = New System.Drawing.Size(70, 15)
+        Me.trans.Size = New System.Drawing.Size(57, 13)
         Me.trans.TabIndex = 5
         Me.trans.Text = "Translator:"
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.TextBox7)
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.GroupBox2)
-        Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Controls.Add(Me.Up)
-        Me.Panel2.Controls.Add(Me.ListView1)
-        Me.Panel2.Location = New System.Drawing.Point(593, 47)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(533, 186)
-        Me.Panel2.TabIndex = 6
-        Me.Panel2.Visible = False
+        Me.FileSelectPanel.Controls.Add(Me.TextBox7)
+        Me.FileSelectPanel.Controls.Add(Me.Button3)
+        Me.FileSelectPanel.Controls.Add(Me.GroupBox2)
+        Me.FileSelectPanel.Controls.Add(Me.GroupBox1)
+        Me.FileSelectPanel.Controls.Add(Me.Up)
+        Me.FileSelectPanel.Controls.Add(Me.FileSelectView)
+        Me.FileSelectPanel.Location = New System.Drawing.Point(593, 47)
+        Me.FileSelectPanel.Name = "Panel2"
+        Me.FileSelectPanel.Size = New System.Drawing.Size(533, 186)
+        Me.FileSelectPanel.TabIndex = 6
+        Me.FileSelectPanel.Visible = False
         '
         'TextBox7
         '
@@ -117,7 +117,7 @@ Partial Class Config
         Me.TextBox7.ForeColor = System.Drawing.Color.Black
         Me.TextBox7.Location = New System.Drawing.Point(3, 162)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(523, 21)
+        Me.TextBox7.Size = New System.Drawing.Size(523, 20)
         Me.TextBox7.TabIndex = 19
         '
         'Button3
@@ -151,17 +151,17 @@ Partial Class Config
         Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox2.Location = New System.Drawing.Point(121, 11)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(164, 23)
+        Me.ComboBox2.Size = New System.Drawing.Size(164, 21)
         Me.ComboBox2.TabIndex = 21
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("MS Reference Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(5, 13)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 15)
+        Me.Label3.Size = New System.Drawing.Size(79, 13)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Special folders:"
         '
@@ -178,10 +178,10 @@ Partial Class Config
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("MS Reference Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(5, 14)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 15)
+        Me.Label2.Size = New System.Drawing.Size(35, 13)
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Drive:"
         '
@@ -191,7 +191,7 @@ Partial Class Config
         Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox3.Location = New System.Drawing.Point(60, 11)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(65, 23)
+        Me.ComboBox3.Size = New System.Drawing.Size(65, 21)
         Me.ComboBox3.TabIndex = 21
         '
         'Up
@@ -211,18 +211,18 @@ Partial Class Config
         '
         'ListView1
         '
-        Me.ListView1.BackColor = System.Drawing.Color.Azure
-        Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ListView1.Font = New System.Drawing.Font("Calibri", 8.25!)
-        Me.ListView1.ForeColor = System.Drawing.Color.Black
-        Me.ListView1.Location = New System.Drawing.Point(3, 36)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(521, 128)
-        Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Ascending
-        Me.ListView1.TabIndex = 20
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.List
+        Me.FileSelectView.BackColor = System.Drawing.Color.Azure
+        Me.FileSelectView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FileSelectView.Font = New System.Drawing.Font("Calibri", 8.25!)
+        Me.FileSelectView.ForeColor = System.Drawing.Color.Black
+        Me.FileSelectView.Location = New System.Drawing.Point(3, 36)
+        Me.FileSelectView.MultiSelect = False
+        Me.FileSelectView.Name = "ListView1"
+        Me.FileSelectView.Size = New System.Drawing.Size(521, 128)
+        Me.FileSelectView.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.FileSelectView.TabIndex = 20
+        Me.FileSelectView.UseCompatibleStateImageBehavior = False
+        Me.FileSelectView.View = System.Windows.Forms.View.List
         '
         'Button2
         '
@@ -242,41 +242,41 @@ Partial Class Config
         '
         'Button1
         '
-        Me.Button1.BackgroundImage = Global.CarStudio.My.Resources.Resources.Button
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(400, 255)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(131, 28)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "&Next >"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonNext.BackgroundImage = Global.CarStudio.My.Resources.Resources.Button
+        Me.ButtonNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonNext.FlatAppearance.BorderSize = 0
+        Me.ButtonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonNext.ForeColor = System.Drawing.Color.White
+        Me.ButtonNext.Location = New System.Drawing.Point(400, 255)
+        Me.ButtonNext.Name = "Button1"
+        Me.ButtonNext.Size = New System.Drawing.Size(131, 28)
+        Me.ButtonNext.TabIndex = 3
+        Me.ButtonNext.Text = "&Next >"
+        Me.ButtonNext.UseVisualStyleBackColor = True
         '
         'Config
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1092, 286)
+        Me.ClientSize = New System.Drawing.Size(1129, 286)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.FileSelectPanel)
         Me.Controls.Add(Me.trans)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ButtonNext)
+        Me.Controls.Add(Me.ComboBoxLang)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
-        Me.Font = New System.Drawing.Font("MS Reference Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Config"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.FileSelectPanel.ResumeLayout(False)
+        Me.FileSelectPanel.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -288,13 +288,13 @@ Partial Class Config
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Title As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ComboBoxLang As System.Windows.Forms.ComboBox
+    Friend WithEvents ButtonNext As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents trans As System.Windows.Forms.Label
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents FileSelectPanel As System.Windows.Forms.Panel
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents FileSelectView As System.Windows.Forms.ListView
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
