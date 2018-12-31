@@ -10,16 +10,3 @@ C:\Users\Kallel\Documents\Visual Studio 2008\Projects\RvCarStudio\RVStudioCompon
 C:\Users\Kallel\Documents\Visual Studio 2008\Projects\RvCarStudio\RVStudioComponents\obj\Debug\RVStudioComponents.pdb
 C:\Users\Kallel\Documents\Visual Studio 2008\Projects\RvCarStudio\RVStudioComponents\obj\Debug\CarStudio.mTextBox.resources
 C:\Users\Kallel\Documents\Visual Studio 2008\Projects\RvCarStudio\RVStudioComponents\obj\Debug\CarStudio.mButton.resources
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\bin\Debug\RVStudioComponents.dll
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\bin\Debug\RVStudioComponents.pdb
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\bin\Debug\RVStudioComponents.xml
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\RVStudioComponents.vbprojAssemblyReference.cache
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\CarStudio.mButton.resources
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\CarStudio.mCheckbox.resources
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\CarStudio.mTextBox.resources
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\CarStudio.Resources.resources
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\RVStudioComponents.vbproj.GenerateResource.cache
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\RVStudioComponents.vbproj.CoreCompileInputs.cache
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\RVStudioComponents.dll
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\RVStudioComponents.xml
-C:\Users\Noire\Source\Repos\RV-Car-Studio\RVStudioComponents\obj\Debug\RVStudioComponents.pdb
